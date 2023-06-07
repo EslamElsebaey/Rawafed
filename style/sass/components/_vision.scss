@@ -164,7 +164,7 @@
             line-height: 1.6;
         }
     }
-    .vision:nth-of-type(odd) .vision-img-holder{
+    .vision:nth-of-type(even) .vision-img-holder{
         grid-column: unset;
         grid-row: unset;
     }

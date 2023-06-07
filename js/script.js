@@ -22,7 +22,7 @@ $(document).ready(function(){
 const mainSwiper = new Swiper('.mainBanner .swiper', {
   loop: true,
   draggable: true,
-  // autoplay: true,
+  autoplay: true,
   navigation: {
     nextEl: ' .mainBanner .swiper-button-next',
     prevEl: '.mainBanner .swiper-button-prev',
@@ -46,16 +46,6 @@ const mainSwiper = new Swiper('.mainBanner .swiper', {
 
 
 
-/************************************************************************************************** */
-
-
-
-
-// clients swiper
-
-
-
-/************************************************************************************************** */
 
 
 
@@ -93,12 +83,6 @@ $(".toTop").click(function(){
 /************************************************************************************************** */
 
 
-
-// show and hide search box
-
-
-
-/************************************************************************************************** */
 
 // footer nested menu
 
@@ -177,12 +161,10 @@ var fixedBar = document.querySelector("header"),
 })  // end of document ready
 
 
-/************************************************************************************************** */
 
 
 
 
 
-/************************************************************************************************** */
 
 

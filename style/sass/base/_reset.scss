@@ -1,0 +1,29 @@
+.logo-width{
+    width: 170px;
+}
+.showToTop{
+    opacity: 1;
+    visibility: visible;
+}
+
+.padding-top{
+  padding-top: 23px;
+}
+
+html[dir="rtl"]{
+  .title-cont h3 , .about-content .about-title{
+    letter-spacing: 0;
+  }
+}
+
+
+
+@include max-992{
+    html[dir="ltr"] nav {
+      clip-path: circle(11.2% at 86% 14%);
+    }
+    html[dir="ltr"] .reset-left {
+      clip-path: circle(122% at 86% 14%);
+    }
+   
+}

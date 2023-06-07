@@ -1,0 +1,547 @@
+//  humburger icon
+ 
+.menu-bars {
+    position: relative;
+    z-index: 300;
+    width: 19px;
+    display: flex;
+    align-items: center;
+    // margin-inline-start: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.overflowHidden{
+    overflow: hidden ;
+}
+
+.show-icons .menu-bars {
+    display: none;
+    background: transparent;
+    outline: none ;
+}
+
+.fixall {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    border: none;
+}
+.hamburger-lines {
+    height: 15px;
+    width: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hamburger-lines .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+   background-color: #000;
+   transition: all 0.4s ease-in-out;
+}
+.open-bars .hamburger-lines .line1 {
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+  }
+  .open-bars .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .open-bars .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+  }
+
+  .barSearchHolder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+// top header
+
+.topHeader{
+    height: 40px;
+    background-color: #128675;
+    .container{
+        height: 100%;
+    }
+}
+.mail-call-sec{
+    display: flex;
+    align-items: center;
+}
+.topheader-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    .mail , .callus{
+        display: flex;
+        align-items: flex-start;
+        &:hover{
+            a , i , span {
+                color: $second-color;
+            }
+        }
+        a , i , span {
+            font-size: 12px;
+            color: #ffffff;
+            transition: all linear .2s;
+        }
+        i{
+            font-size: 16px; 
+        }
+    }
+    .mail a , .callus span {
+        margin-inline-start: 8px;
+        display: inline-block;
+    }
+    .mail{
+        margin-inline-start: 20px;
+    }
+    .lang{
+        &:hover{
+            a{
+                color: $second-color;
+            }
+        }
+        a{
+        font-size: 12px;
+        color: #ffffff;
+        transition: all linear .2s;
+        }
+    }
+   
+}
+
+//  header
+.main-header{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.07);
+}
+
+.reset-left {
+    left: 0;
+    top: 0;
+    clip-path: circle(122% at 9% 15%);
+    visibility: visible;
+    opacity: 1;
+}
+
+.logo {
+    a{
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+
+@keyframes contact-pulse {
+	0% {
+		box-shadow: 0 0 0 0 $main-color;
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(148, 95, 5,  0);
+	}
+}
+@keyframes contact-pulse2 {
+	0% {
+		box-shadow: 0 0 0 0 $second-color;
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(148, 95, 5,  0);
+	}
+}
+
+
+
+
+
+
+header{
+    background-color: #fff;
+    transition: all linear 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+}
+nav{
+    transition: all linear .3s;
+    .container {
+        padding: 0;
+    }
+}
+.header-content{
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.closeSearh-btn{
+    i{
+        font-size: 25px;
+        color: #fff;
+    }
+    
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    li:last-child{
+        margin-inline-end: 0;
+    }
+   > li{
+        margin-inline-end: 28px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:hover{
+            > a {
+                color: $main-color;
+                &::after{
+                    color: $main-color;
+                }
+            }
+        }
+       > a{
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #333333;
+        font-weight: 700;
+        transition: all linear .2s;
+        }
+    }
+}
+
+
+
+.li-drop {
+    position: relative;
+    padding: 13px 0;
+     > a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after{
+            content: "\f107";
+            font-family: "line Awesome free";
+            font-weight: 900;
+            font-size: 12px;
+            margin-inline-start: 3px;
+            color: #000;
+            transition: all linear .2s;
+        }
+    }
+    &:hover{
+        .ul-drop {
+            opacity: 0.949;
+            visibility: visible;
+        }
+    }
+    .ul-drop{
+        transition: all linear 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 100%;
+        z-index: 11;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 239px;
+        background-color: #128675;
+        padding:  5px 17px ;
+        inset-inline-start: -17px;
+        li {
+            padding: 9px 0;
+            text-align: start;
+            transition: all linear .3s;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+        }
+        a{
+            font-size: 14px;
+            line-height: 1.2;
+            color: #ffffff;
+             display: block;
+            transition: all linear .2s;
+            text-transform: capitalize;
+            &:hover{
+                color: $second-color;
+            }
+        }
+    }
+}
+.li-drop .ul-drop li:last-child{
+    border-bottom: none;
+}
+
+
+
+.openNav-btn{
+    display: none !important;
+    cursor: pointer;
+    i {
+        font-size: 28px;
+        color: #000;
+       
+    }
+}
+
+.barSearchHolder{
+    display: none;
+}
+
+.closeNav-btn{
+    display: none;
+    cursor: pointer;
+}
+
+
+.open-nav{
+    inset-inline-start: -100% !important;
+}
+
+
+@include min-992 {
+    nav {
+        .lang{
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@include max-992 {
+    .li-drop .ul-drop li{
+        padding: 0;
+        border: none;
+        margin-bottom: 10px;
+    }
+    .mail-call-sec{
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .logo a img {
+        width: 180px;
+    }
+    .header-content{
+        padding: 10px 0;
+    }
+    nav .container{
+        padding: 0 20px;
+    }
+    
+    .top-header{
+        display: none;
+    }
+    .li-drop .ul-drop li a:hover {
+        background-color: transparent;
+    }
+   
+    .barSearchHolder{
+        display: flex;
+        align-items: center;
+    }
+    .icon-rotate::after{
+        transform:  rotate(180deg)  !important;
+    }
+    .li-drop {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-inline-end: 0 !important;
+        padding: 0;
+        &:hover{
+            &::after{
+                color: #000;
+            }
+        }
+        a{
+            display: block;
+            width: 100%;
+            &::after{
+                transition: all linear .3s;
+                inset-inline-end: 0;
+                font-size: 16px;
+            }
+        }
+       .ul-drop{
+        transition: none;
+        background-color: transparent;
+        padding: 0;
+        min-width: auto;
+        width: 100%;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 8px;
+        display: none;
+        box-shadow: none;
+        transform: none;
+            li a {
+                color: #000;
+                text-align: start;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .li-drop .ul-drop::after{
+        display: none;
+    }
+    .header-content{
+        position: relative;
+        width: 100%;
+    }
+    .openNav-btn{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-overlay{
+        display: none;
+    }
+    nav{
+        padding-top: 80px;
+        overflow-y: auto;
+        position: fixed ;
+        top: 0 ;
+        inset-inline-start: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        clip-path: circle(10.9% at 16% 16%);
+        transition: all linear .3s;
+        z-index: 200;
+        // overflow-y: auto;
+        .lang{
+            a{
+                color: #808080;
+                &:hover{
+                    color: #808080;
+                }
+            }
+        }
+    }
+
+    .nav-ul{
+        flex-direction: column;
+        // margin: 130px 0 0 0 ;
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+    .nav-ul > li{
+        margin-bottom: 20px;
+        margin-inline-end: 0;
+        width: 100%;
+        a{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            &:hover{
+                color: #000;
+            }
+            &::after{
+                height: auto;
+            }
+        }
+    }
+    .closeNav-btn{
+        display: block;
+          i{
+              font-size: 24px;
+              color: #000;
+              width: 100%;
+              height: 100%;
+              display: block;
+          }
+      }
+
+     
+      .topheader-content .lang{
+        display: none;
+    }
+    .topheader-content .callus , .topheader-content .mail , .topheader-content .lang{
+        border: none;
+        padding: 0;
+    }
+    
+    .topheader-content .mail{
+        margin-inline-start: 0;
+    }
+    .topheader-content .mail a, .topheader-content .callus span{
+        margin-inline-start: 5px;
+    }
+ 
+
+}
+
+
+@include max-768 {
+    // .hamburger-lines{
+    //     height: 17px;
+    // }
+    // .hamburger-lines .line{
+    //     height: 2.5px;
+    // }
+    .logo a img {
+        width: 150px;
+    }
+   
+   nav{
+    padding-top: 55px;
+   }
+    .header-content{
+        padding: 7px 0 ;
+    }
+    .topHeader{
+        height: auto;
+        padding: 8px 0;
+    }
+    .li-drop::after{
+        font-size: 16px;
+    }
+    .li-drop .ul-drop li{
+        padding-bottom: 0;
+    }
+   
+}
+
+
+
+
+
+
+
+@media screen and (min-width : 992px) and (max-width:1200px) {
+    .nav-ul > li{
+        margin-inline-end: 13px;
+    }
+
+} 
+
+
+

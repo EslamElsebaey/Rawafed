@@ -1,0 +1,174 @@
+
+.vision-parent{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 0;
+}
+.vision-img-holder{
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.vision-desc{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #128675;
+    .vision-desc-content{
+        padding-inline-start: 80px;
+    }
+    
+.vision-desc-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.vision-desc-text{
+    max-width: 492px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 43px;
+}
+.vision-readMore{
+    font-size: 16px;
+    text-decoration: underline;
+    color: #82eddd;
+    transition: color linear .2s;
+    &:hover{
+        color: $second-color;
+    }
+}
+}
+
+
+.vision:nth-of-type(odd){
+    .vision-img-holder{
+        grid-column: 2;
+        grid-row: 1; 
+    }
+    .vision-desc{
+        background-color: #fff;
+    }
+    .vision-desc-title{
+        color: #128675;
+    }
+    .vision-desc-text{
+        color: #333333;
+    }
+    .vision-readMore{
+        color: #7d7d7d;
+        &:hover{
+            color: $second-color;
+        }
+    }
+   
+}
+
+// ****************************************************************************************************
+// Career
+
+.career{
+    padding: 115px 0 ;
+}
+
+.joinUs-btn{
+    width: 189px;
+    height: 60px;
+    background-color: #f79727;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  0 auto;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    transition: all linear .2s;
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #128675;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition:  transform 0.4s ease-out;
+    }
+    &:hover{
+        color: #ffffff;
+        &::before{
+            transform: scaleX(1);
+            transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+    }
+}
+
+
+@include max-1200{
+    .vision-desc .vision-desc-content{
+       padding-inline-start: 60px;
+       padding-inline-end: 30px;
+    }
+}
+
+@include max-992 {
+    .vision-desc .vision-desc-text{
+        max-width: 100%;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    .vision-desc .vision-desc-title{
+        margin-bottom: 15px;
+    }
+}
+
+
+@include max-768 {
+    .career{
+        padding: 60px 20px;
+    }
+    .vision-parent{
+        grid-template-columns:  1fr;
+    }
+    .vision-desc .vision-desc-content{
+        padding: 45px 20px;
+        text-align: center;
+    }
+    .vision-desc .vision-desc-title{
+        text-align: center;
+        font-size: 18px;
+    }
+    .vision-desc .vision-desc-text{
+        text-align-last: center;
+        word-spacing: -1px;
+        letter-spacing: 0px;
+        line-height: 1.4;
+        font-size: 15px;
+    }
+    html[dir="rtl"]{
+        .vision-desc .vision-desc-text{
+            word-spacing: 0px;
+            line-height: 1.6;
+        }
+    }
+    .vision:nth-of-type(odd) .vision-img-holder{
+        grid-column: unset;
+        grid-row: unset;
+    }
+    .joinUs-btn{
+        font-size: 16px;
+        width: 160px;
+        height: 50px;
+    }
+}

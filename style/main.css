@@ -441,23 +441,23 @@ img {
   color: #f79727;
 }
 
-.vision:nth-of-type(odd) .vision-img-holder {
+.vision:nth-of-type(even) .vision-img-holder {
   grid-column: 2;
   grid-row: 1;
 }
-.vision:nth-of-type(odd) .vision-desc {
+.vision:nth-of-type(even) .vision-desc {
   background-color: #fff;
 }
-.vision:nth-of-type(odd) .vision-desc-title {
+.vision:nth-of-type(even) .vision-desc-title {
   color: #128675;
 }
-.vision:nth-of-type(odd) .vision-desc-text {
+.vision:nth-of-type(even) .vision-desc-text {
   color: #333333;
 }
-.vision:nth-of-type(odd) .vision-readMore {
+.vision:nth-of-type(even) .vision-readMore {
   color: #7d7d7d;
 }
-.vision:nth-of-type(odd) .vision-readMore:hover {
+.vision:nth-of-type(even) .vision-readMore:hover {
   color: #f79727;
 }
 

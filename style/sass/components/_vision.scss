@@ -46,7 +46,7 @@
 }
 
 
-.vision:nth-of-type(odd){
+.vision:nth-of-type(even){
     .vision-img-holder{
         grid-column: 2;
         grid-row: 1; 
@@ -68,6 +68,8 @@
     }
    
 }
+
+
 
 // ****************************************************************************************************
 // Career

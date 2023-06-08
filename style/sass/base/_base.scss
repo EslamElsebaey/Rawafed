@@ -160,8 +160,8 @@ cursor : pointer;
   position: fixed;
   width: 40px;
   height: 40px;
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,6 +226,10 @@ cursor : pointer;
 
 @include min-768 {
   .toTop{
+    &:focus{
+      border: none;
+      outline: none;
+    }
     &:hover{
       background-color: $second-color;
       i{

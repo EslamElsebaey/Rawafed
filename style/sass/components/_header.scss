@@ -1,65 +1,21 @@
-//  humburger icon
- 
-.menu-bars {
-    position: relative;
-    z-index: 300;
-    width: 19px;
+.bars , .closeBtn{
+    padding: 0;
+    &:focus{
+        outline: none;
+    }
+    i {
+        color: #000;
+        font-size: 24px;
+        display: block;
+    }
+}
+
+.close-sec{
     display: flex;
     align-items: center;
-    // margin-inline-start: 15px;
-    transition: all 0.3s ease-in-out;
-}
-.overflowHidden{
-    overflow: hidden ;
-}
-
-.show-icons .menu-bars {
-    display: none;
-    background: transparent;
-    outline: none ;
-}
-
-.fixall {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    outline: none !important;
-    border: none;
-}
-.hamburger-lines {
-    height: 15px;
-    width: 18px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
-.hamburger-lines .line {
-    display: block;
-    height: 2px;
-    width: 100%;
-   background-color: #000;
-   transition: all 0.4s ease-in-out;
-}
-.open-bars .hamburger-lines .line1 {
-    transform: rotate(45deg);
-    transform-origin: 0% 0%;
-  }
-  .open-bars .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  
-  .open-bars .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-    transform-origin: 0% 100%;
-  }
 
-  .barSearchHolder{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-// top header
 
 .topHeader{
     height: 40px;
@@ -301,14 +257,8 @@ nav{
     }
 }
 
-.barSearchHolder{
-    display: none;
-}
 
-.closeNav-btn{
-    display: none;
-    cursor: pointer;
-}
+
 
 
 .open-nav{
@@ -317,6 +267,9 @@ nav{
 
 
 @include min-992 {
+    .close-sec, .bars  {
+        display: none ;
+    }
     nav {
         .lang{
             display: none;
@@ -349,7 +302,7 @@ nav{
         padding: 10px 0;
     }
     nav .container{
-        padding: 0 20px;
+        padding: 0 15px;
     }
     
     .top-header{
@@ -359,10 +312,6 @@ nav{
         background-color: transparent;
     }
    
-    .barSearchHolder{
-        display: flex;
-        align-items: center;
-    }
     .icon-rotate::after{
         transform:  rotate(180deg)  !important;
     }
@@ -418,11 +367,9 @@ nav{
         align-items: center;
         justify-content: center;
     }
-    .banner-overlay{
-        display: none;
-    }
+  
     nav{
-        padding-top: 80px;
+        padding-top: 65px;
         overflow-y: auto;
         position: fixed ;
         top: 0 ;
@@ -501,18 +448,15 @@ nav{
 
 
 @include max-768 {
-    // .hamburger-lines{
-    //     height: 17px;
-    // }
-    // .hamburger-lines .line{
-    //     height: 2.5px;
-    // }
+    nav .container{
+        padding: 0 20px;
+    }
     .logo a img {
         width: 150px;
     }
    
    nav{
-    padding-top: 55px;
+    padding-top: 52px;
    }
     .header-content{
         padding: 7px 0 ;

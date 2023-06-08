@@ -22,7 +22,7 @@ $(document).ready(function(){
 const mainSwiper = new Swiper('.mainBanner .swiper', {
   loop: true,
   draggable: true,
-  autoplay: true,
+  // autoplay: true,
   navigation: {
     nextEl: ' .mainBanner .swiper-button-next',
     prevEl: '.mainBanner .swiper-button-prev',
@@ -52,11 +52,16 @@ const mainSwiper = new Swiper('.mainBanner .swiper', {
 // open and close sideBar
 
 
-$(".menu-bars").click(function(){
-  $(this).toggleClass("open-bars");
-  $("nav").toggleClass("reset-left");
-  $("body").toggleClass("overflowHidden");
+$(".bars").click(function (){
+  $("nav").addClass("reset-left");
+  $("body").addClass("overflowHidden");
 })
+
+$(".closeBtn").click(function (){
+  $("nav").removeClass("reset-left");
+  $("body").removeClass("overflowHidden");
+})
+
 
 
 

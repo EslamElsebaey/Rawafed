@@ -1,5 +1,6 @@
 
 .mainBanner{
+
     .mainBanner-parent{
     position: relative;
    }
@@ -71,35 +72,39 @@ html[dir="rtl"]{
 
 
 
-
-
-.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
-   transition: all linear 0.3s;
-    margin-top: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    i{
-        opacity: 0.302;
-        font-size: 36px;
-        color: #ffffff;
-        transition: all linear 0.3s;
-        
-    }
-    &:hover{
-        i{
-            color: #fff;
-            opacity: 1;
-        }
-    
-    }
-}
 .mainBanner{
-    // .swiper-button-prev, .swiper-rtl .swiper-button-next{
-    //     left: 50px;
-    // }
-    // .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    //     right: 50px;
-    // }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        transition: all linear 0.2s;
+         margin-top: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         i{
+            opacity: 0.6;
+             font-size: 40px;
+             color: #ffffff;
+             transition: all linear 0.3s;
+             
+         }
+         &:hover{
+             i{
+                 color: #fff;
+                 opacity: 1;
+             }
+         
+         }
+     }
+     
+}
+
+
+.mainBanner{
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 50px;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 50px;
+    }
     .swiper-pagination-bullet{
         opacity: 0.502;
         border-radius: 0;
@@ -108,9 +113,6 @@ html[dir="rtl"]{
     .swiper-pagination-bullet-active{
         opacity: 1;
         background-color: #f79727;
-    }
-    .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev i {
-        display: none;
     }
     
 }
@@ -152,6 +154,9 @@ html[dir="rtl"]{
 }
 
 @include max-992 {
+    .mainBanner .swiper-button-prev, .mainBanner .swiper-rtl .swiper-button-next, .mainBanner .swiper-button-next, .mainBanner .swiper-rtl .swiper-button-prev{
+        display: none;
+    }
     .banner-desc h2{
         font-size: 30px;
         margin-bottom: 15px;

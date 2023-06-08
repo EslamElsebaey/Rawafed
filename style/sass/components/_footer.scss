@@ -180,6 +180,11 @@ html[dir="rtl"]{
 
 
 @include max-768 {
+
+    .copyright p{
+        width: 100%;
+        text-align: center;
+    }
    
     .dash{
         display: none;
@@ -194,7 +199,7 @@ html[dir="rtl"]{
         padding-bottom: 20px;
     }
     .quick-drop li{
-        max-width: 90%;
+        max-width: 93%;
         margin-bottom: 10px;
     }
     

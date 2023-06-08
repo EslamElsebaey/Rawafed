@@ -170,6 +170,10 @@ cursor : pointer;
   transition: all linear .3s;
   opacity: 0;
   visibility: hidden;
+  &:focus{
+    border: none;
+    outline: none;
+  }
   .toTop-icon{
     font-size: 20px;
     color: #000;

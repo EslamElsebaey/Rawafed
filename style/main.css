@@ -195,6 +195,10 @@ img {
   opacity: 0;
   visibility: hidden;
 }
+.toTop:focus {
+  border: none;
+  outline: none;
+}
 .toTop .toTop-icon {
   font-size: 20px;
   color: #000;
@@ -1346,6 +1350,10 @@ html[dir=rtl] .footer-shape {
 }
 
 @media only screen and (max-width: 767px) {
+  .copyright p {
+    width: 100%;
+    text-align: center;
+  }
   .dash {
     display: none;
   }
@@ -1360,7 +1368,7 @@ html[dir=rtl] .footer-shape {
     padding-bottom: 20px;
   }
   .quick-drop li {
-    max-width: 90%;
+    max-width: 93%;
     margin-bottom: 10px;
   }
   .RTCO .quick-drop li:first-of-type {

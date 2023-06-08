@@ -1435,8 +1435,16 @@ html[dir=rtl] .footer-shape {
   visibility: visible;
 }
 
-.padding-top {
-  padding-top: 23px;
+.padding-top-25 {
+  padding-top: 25px;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.padding-top-18 {
+  padding-top: 18px;
 }
 
 html[dir=rtl] .title-cont h3, html[dir=rtl] .about-content .about-title {
